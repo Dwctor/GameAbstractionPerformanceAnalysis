@@ -2,11 +2,18 @@ use bevy::prelude::*;
 
 fn main(){
     App::new()
-        .add_plugins((DefaultPlugins, HelloPlugin))
+        .add_plugins(DefaultPlugins)
+        //.add_plugins(User_Plugins)
+        //.add_resources(User_Resources)
+        //.add_systems(User_Systems)
         .run();
 }
 
+// -----------------------------------------------------------------------------
 // Plugins
+// -----------------------------------------------------------------------------
+
+/*
 pub struct HelloPlugin;
 
 impl Plugin for HelloPlugin{
@@ -17,8 +24,13 @@ impl Plugin for HelloPlugin{
         .add_systems(Update, /*hello_world, */(rm_skinwalker, greet_people).chain());
     }
 }
+*/
 
+// -----------------------------------------------------------------------------
 // Components & Resources
+// -----------------------------------------------------------------------------
+
+/*
 #[derive(Component)]
 struct Person;
 
@@ -27,8 +39,13 @@ struct Name(String);
 
 #[derive(Resource)]
 struct GreetTimer(Timer);
+*/
 
+// -----------------------------------------------------------------------------
 // Systems
+// -----------------------------------------------------------------------------
+
+/*
 fn hello_world(){
     println!("hello world!");
 }
@@ -41,13 +58,6 @@ fn greet_people(time: Res<Time>, mut timer: ResMut<GreetTimer>, q: Query<&Name, 
     }
 }
 
-// Adding entities
-fn add_people(mut c: Commands){
-    c.spawn((Person, Name("Kael Augusto".to_string())));
-    c.spawn((Person, Name("Dr. Zobligok".to_string())));
-    c.spawn((Person, Name("Skinwalker S".to_string())));
-}
-
 fn rm_skinwalker(mut q: Query<&mut Name, With<Person>>){
     for mut name in &mut q {
         if name.0 == "Skinwalker S" {
@@ -56,3 +66,17 @@ fn rm_skinwalker(mut q: Query<&mut Name, With<Person>>){
         }
     }
 }
+*/
+
+// -----------------------------------------------------------------------------
+// Entities Management
+// -----------------------------------------------------------------------------
+
+/*
+fn add_people(mut c: Commands){
+    c.spawn((Person, Name("Kael Augusto".to_string())));
+    c.spawn((Person, Name("Dr. Zobligok".to_string())));
+    c.spawn((Person, Name("Skinwalker S".to_string())));
+}
+
+*/
