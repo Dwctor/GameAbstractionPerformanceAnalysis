@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://v0pdekg2cr78"]
+
+[ext_resource type="PackedScene" uid="uid://4xsyknwk44kx" path="res://scenes/fps.tscn" id="1_mkd68"]
+[ext_resource type="Script" path="res://scripts/fps.gd" id="2_80ple"]
+[ext_resource type="Texture2D" uid="uid://bkfrey015nj63" path="res://assets/Player_0.png" id="3_wkjxb"]
+[ext_resource type="Texture2D" uid="uid://ltm0s3vg405a" path="res://assets/Player_1.png" id="4_jsmo8"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="5_04vco"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0x3du"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wkjxb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jsmo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wkjxb")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 6.0
+}]
+
+[node name="Game" type="Node2D"]
+
+[node name="FPS" parent="." instance=ExtResource("1_mkd68")]
+text = "FPS: ??"
+script = ExtResource("2_80ple")
+
+[node name="Player" type="AnimatedSprite2D" parent="."]
+position = Vector2(320, 180)
+sprite_frames = SubResource("SpriteFrames_0x3du")
+animation = &"Walk"
+autoplay = "Walk"
+script = ExtResource("5_04vco")

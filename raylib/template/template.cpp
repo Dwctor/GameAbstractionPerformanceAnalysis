@@ -26,7 +26,10 @@ int main(){
 		// Rendering Logic
 		//----------------------------------------------------------------------
 		BeginDrawing();
+			ClearBackground((Color){0,0,0,0});
 
+
+			DrawFPS(0, 0);
 		EndDrawing();
 		//Post-Rendering Logic (Most likely empty)
 	}

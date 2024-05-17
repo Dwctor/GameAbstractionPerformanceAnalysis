@@ -1,0 +1,15 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-Wall",
+      "-o",
+      "basicRendering.o",
+      "basicRendering.c"
+    ],
+    "directory": "/run/media/kaelsa/1tera/KaelMedia/KPrograms/GitHub/GAPA/raylib/basicRendering",
+    "file": "/run/media/kaelsa/1tera/KaelMedia/KPrograms/GitHub/GAPA/raylib/basicRendering/basicRendering.c",
+    "output": "/run/media/kaelsa/1tera/KaelMedia/KPrograms/GitHub/GAPA/raylib/basicRendering/basicRendering.o"
+  }
+]

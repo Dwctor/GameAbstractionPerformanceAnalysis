@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://v0pdekg2cr78"]
+[gd_scene load_steps=3 format=3 uid="uid://v0pdekg2cr78"]
+
+[ext_resource type="PackedScene" uid="uid://4xsyknwk44kx" path="res://scenes/fps.tscn" id="1_mkd68"]
+[ext_resource type="Script" path="res://scripts/fps.gd" id="2_80ple"]
 
 [node name="Game" type="Node2D"]
+
+[node name="FPS" parent="." instance=ExtResource("1_mkd68")]
+text = "FPS: ??"
+script = ExtResource("2_80ple")

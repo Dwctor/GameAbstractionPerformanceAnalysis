@@ -3,3 +3,5 @@
 
 ## Template
 All three game engine folders have a `template` subfolder that attempts to show the structure that all games in that game engine will try to replicate.
+
+Other than that, the Template example has a FPS display to show how many frames per second that engine achieves.

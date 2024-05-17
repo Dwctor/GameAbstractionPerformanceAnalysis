@@ -11,5 +11,12 @@ config_version=5
 [application]
 
 config/name="template"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=720
+window/vsync/vsync_mode=0
