@@ -133,10 +133,15 @@ fn add_player_character(
     let player_texture_1 = asset_server.load("Player_1.png");
 
     let player: Player = Player ([player_texture_0.clone(), player_texture_1], Timer::from_seconds(1./6., TimerMode::Repeating), Frame::Idle);
-    
+    let transform: Transform = Transform {
+        scale: Vec3 {x: 2., y: 2., z: 1.},
+        ..default()
+    };
+
     c.spawn((
         SpriteBundle {
             texture: player_texture_0,
+            transform: transform, 
             //transform: Transform::from_xyz(0., 0., 0.),
             ..default()
         },

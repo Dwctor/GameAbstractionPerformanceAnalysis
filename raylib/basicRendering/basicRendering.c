@@ -69,7 +69,7 @@ int main(){
 			ClearBackground((Color){0,0,0,0});
 
 			BeginMode2D(camera);
-				DrawTextureRec(player.sprite[player.frame], player.source, player.pos, WHITE);
+				DrawTexturePro(player.sprite[player.frame], player.source, (Rectangle){.x = player.pos.x, .y = player.pos.y, .width = 48, .height = 48}, (Vector2) {0,0}, 0, WHITE);
 			EndMode2D();
 
 			DrawFPS(0, 0);

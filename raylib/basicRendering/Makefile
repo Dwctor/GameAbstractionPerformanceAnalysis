@@ -1,7 +1,7 @@
 # Project Names
 # -------------
 PROJECT_NAME	?= basicRendering
-GAME_NAME		?= BasicRendering
+GAME_NAME		?= basicRendering
 
 # Compilation Variables
 # ---------------------
